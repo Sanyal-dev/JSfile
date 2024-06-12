@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitalclock</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+         width: 750px;
+         height: 400px;
+         background: linear-gradient(to bottom left, red, yellow,blue);
+         display: flex;
+        margin: auto;
+        padding: 50px;
+        border-radius: 50%;
+        }
+        
+        .container .box1{
+            width: 200px;
+            height: 200px;
+            background: black;
+            margin: auto;
+            display: flex;
+            color: blue;
+            font-size: 100px;
+            padding: 50px;
+            border-radius: 20%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+     
+        <div class="box1" id="hh"></div>
+        <div class="box1" id="mm"></div>
+        <div class="box1" id="ss"></div>
+     
+  </div>
+
+  
+  </div>
+
+
+  <script>
+
+    setInterval(()=>{
+
+   
+
+    let hh =new Date().getHours()
+    let mm =new Date().getMinutes()
+    let ss =new Date().getSeconds()
+    
+      
+
+    document.getElementById(`hh`).innerHTML = hh
+    document.getElementById(`mm`).innerHTML = mm
+    document.getElementById(`ss`).innerHTML = ss
+
+},1000)
+  </script>
+    
+</body>
+</html>
